@@ -1,0 +1,140 @@
+*{ /*Sets the default restrictions and options for everything on the page*/
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    background-size: auto;
+    
+}
+.bg{ /*Sets a background behind the content space to a purple color*/
+    background-color: #341d5c;
+    height: 1000%;
+
+}
+
+main{
+    background-color: #341d5c;
+}
+footer{ /*Makes it so that the footer is at the bottom left of  the page and white*/
+    vertical-align: bottom; 
+    color: white; /*Sets the color of the text*/
+    margin-bottom: 2px; /*Makes it so that the footer is at the bottom left of  the page and white*/
+    background-color: #341d5c; /*Sets the color of the text*/
+}
+.header{ /*header settings with display method, sizes and color*/
+    width: 100%; /*Sets the width of the header*/
+    height: 80px; /*Sets the height of the header*/
+    display: block; /*Makes it so that the header is not hidden*/
+    background-color: #222222; /*Sets the background color of the header*/
+}
+.inner_header{ /*header settings with display method, sizes and color*/                   
+    width: 100%; /*Sets the width of the header*/                   
+    height: 100%; /*Sets the height of the header*/                   
+    display: block; /*Makes it so that the header is not hidden*/                   
+    margin: 0 auto; /*Sets the margin of the header*/                   
+    background-image: none; /*Removes the background image of the header*/                    
+}
+
+.NavBarLogo{ /*NavBarLogo settings with display method, sizes and color*/                   
+    height: 100%; /*Sets the height of the header*/                   
+    display: table; /*Makes it so that the header is not hidden*/                    
+    float: left; /*Makes it so that the header is not hidden*/                    
+    background-image: none; /*Removes the background image of the header*/                    
+
+
+}
+
+.NavBarLogo h1{ /*the setting for the name in the top left of the page, in the navigation bar*/
+    color: white; /*Sets the color of the name*/                    
+    background-image: none; /*Removes the background image of the name*/                   
+
+    height: 100%; /*Sets the height of the navigation bar*/                    
+    display: table-cell; /*Sets the display of the navigation bar*/                    
+    vertical-align: middle; /*Sets the vertical alignment of the navigation bar*/                     
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /*Sets the font of the navigation bar*/                   
+}
+
+
+.navigation{ /*Sets the navigation bar*/                          
+    float: right; /*Sets the float of the navigation bar*/        
+    height: 100%; /*Sets the height of the navigation bar*/
+    background-image: none; /*Sets the background image of the navigation bar*/     
+
+
+}
+
+.navigation a{ /*Sets the navigation bar*/                          
+    height: 100%; 
+    display: table;
+    float: left;
+    padding: 0px 20px;
+    background-image: none;
+
+}
+
+.navigation a li{ /*navigation bar tabs on the top right of the page*/
+    display: table-cell;
+    vertical-align: middle; /*Centers them to the vertical middle of the bar*/
+    height: 100%;
+    color: white; /*makes them the color white*/
+    background-image: none;
+}
+
+.projectslist p{ /*In the projects page, formats the entries into a list*/
+    font-size: 125%;
+    color: white;
+    margin-top: 9%;
+}
+
+.contentspace {  /*Controls the space in the middle of the screen, where all the content is*/
+    background-color: #232323; /*sets the color of the block to grey*/
+    width: 75%; height: 100%; /*sets the height and width of the div*/
+    background-image: none;
+
+    margin-left: auto; /*centers the div horizontally*/
+    margin-right: auto;/*centers the div horizontally*/
+}
+
+img{ /*Controls the images on the projects page*/
+    margin: 1px; /*sets the margin of the images*/
+}
+
+.contentspace h1{ /*Controls the h1 on the projects page*/
+    color: white;
+}
+.img {
+    width: 50%; height: 50%; /*sets the height and width of the images*/
+    background-image: none;
+    
+}
+
+.Message{
+    color: white;
+    font-size: 20px;
+}
+.Message img{
+    width: 20%; height: 20%; /*sets the height and width of the images*/
+    border-radius: 8px; /*sets the border radius of the images*/
+    border: 2px solid white; /*sets the border of the images*/
+    }
+    video{ /*Controls the video on the projects page*/
+        width: 50%; height: 40%; /*sets the height and width of the video*/
+        margin-left: 25%; /*sets the margin of the video*/
+        margin-top: 3%; /*sets the margin of the video*/
+    }    
+
+input[type=text], select, textarea{ /*Controls the text boxes on the contact page*/
+width: 100%; /*sets the width of the text boxes*/
+border: 12px; /*sets the border of the text boxes*/
+border-radius: 4px; /*sets the border radius of the text boxes*/
+box-sizing: border-box; /*sets the box sizing of the text boxes*/
+margin-top: 6px; /*sets the margin of the text boxes*/       
+margin-bottom: 16px; /*sets the margin of the text boxes*/       
+resize: vertical /*sets the resize of the text boxes*/        
+}
+
+
+
+label{ /*Controls the labels on the contact page*/
+    color: white; /*sets the color of the labels*/
+}

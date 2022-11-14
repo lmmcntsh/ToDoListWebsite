@@ -1,0 +1,68 @@
+<%- include ../partials/header.ejs %>
+
+
+<!-- Page Content -->
+<style>
+
+</style>
+<body style="background-color: #D1C0A8">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-offset=3 col-md-10">
+                <h1><%= title %></h1>
+                <a href=/ class="btn btn-dark" role="button">
+                    <i class="fas fa-home"></i>HomePage
+                </a>
+                <a href=/show-list/add class="btn btn-success" role="button">
+                    <i class="fas fa-plus-circle"></i>Add Item
+                </a>
+                <br>
+                <br>
+            <table class= "table table-bordered table-striped table-hover">
+            <tr class="d-flex">
+                <th class="text-center col-2">Item</th>
+                <th class="text-center col-3">Description</th>
+                <th class="text-center col-2">When</th>
+                <th class="text-center col-2">Edit</th>
+                <th class="text-center col-2">Delete</th>
+            </tr>
+            <!-- repeat the template -->
+            <% for(let count=0; count<ToDoList.length; count++) { %>
+                <tr class="d-flex">
+                    <td class="text-center col-2"><%= ToDoList[count].item %></td>
+                    <td class="text-center col-3"><%= ToDoList[count].description %></td>
+                    <td class="text-center col-2"><%= ToDoList[count].when %></td>
+                    <td class="text-center col-2">   
+                        <a href="/show-list/edit/<%= ToDoList[count]._id %>"
+                        class="btn btn-outline secondary">
+                        <i class="fas fa-pencil-alt"></i>Edit</a>
+                        </td>
+                    <td class="text-center col-2">
+                        <a href="/show-list/delete/<%= ToDoList[count]._id %>"
+                        class="btn btn-danger">
+                        <i class="fas fa-trash-alt"></i>Delete</a>
+                    </td>
+                </tr>
+            <% } %>
+            </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+    <%- include ../partials/bottom_nav.ejs %>
+    <%- include ../partials/footer.ejs %>
+
+  
+   
+    
+
+
+</body>
+</html>
+
+
+
+
+
