@@ -6,6 +6,12 @@ let mongoose = require('mongoose'); // npm install mongoose --save
 let List = require('../models/list');
 // CRUD OPERATIONS
 
+
+
+
+//Controllers for the pages related to the list
+
+//Display the main list
 module.exports.displayToDoList = (req, res, next) => {  
     List.find((err, todolist) => {
         if (err) 
@@ -22,10 +28,14 @@ module.exports.displayToDoList = (req, res, next) => {
     });
 }
 
+
+//routes to the add page
 module.exports.displayAddPage = (req, res, next) => {
     res.render('list/add', {title:'New Item'})
 };
 
+
+//processes the add page information
 module.exports.processAddPage = (req, res, next) => {
     let newItem = List ({
         "item":req.body.item,
@@ -46,6 +56,8 @@ module.exports.processAddPage = (req, res, next) => {
 
 }
 
+
+//routes to the edit page
 module.exports.displayEditPage = (req, res, next) => {
     let id = req.params.id;
     List.findById(id, (err,ItemToEdit) => {
@@ -59,6 +71,7 @@ module.exports.displayEditPage = (req, res, next) => {
 
 }
 
+//processes the edit page information
 module.exports.processEditPage = (req, res, next) => {
     let id = req.params.id;
     let updateItem = List({
@@ -77,6 +90,8 @@ module.exports.processEditPage = (req, res, next) => {
     });
 }
 
+
+//Deletes the item from the list
 module.exports.performDelete = (req, res, next) => {
     let id = req.params.id;
     List.deleteOne({_id: id}, (err) => {

@@ -2,13 +2,15 @@
 
 
 <!-- Content for the edit Page   -->
-<body style="background-color: #D1C0A8">
+<body style="background-color: #D1C0A8">  <!-- This is the background color for the whole page -->
     <div class="container" >
         <div class="row">
             <div class="col-md-offset-3 col-md-6">
-                <h1><%= title %></h1>
+                <h1><%= title %></h1>  <!-- This is the title of the page -->
                 <form class+"form" method="post">
-                
+                    <!--- This is the form for the edit page -->
+
+                    <!-- Entry space for the name -->
                     <div class="form-group">
                     <label for="itemTextField" style="color:black">New Entry</label>
                     <input type="text" class="form-control" 
@@ -16,20 +18,21 @@
                     placeholder="What needs to be done?"
                     name="item" 
                     value="<%= list.item %>"
-                    required>
+                    required> <!-- This is the current value of the item name -->
                     </div>
                     
-
+                    <!-- Entry space for the description -->
                     <div class="form-group">
                     <label for="descTextField" style="color:black">Description</label>
                     <textarea type="text" class="form-control" 
                     id="descTextField"
                     placeholder="Give some more detail"
                     name="description" required>
-                    <%= list.description %>
+                    <%= list.description %> <!-- This fills the text area with the current value of the description -->
                     </textarea>
                     </div>
 
+                    <!-- Entry space for the date -->
                     <div class="form-group">
                     <label for="whenTextField" style="color:black">Completion Date/Time</label>
                     <input type="text" class="form-control" 
@@ -37,15 +40,15 @@
                     placeholder="When does this need to be done?"
                     name="when" 
                     value="<%= list.when %>"
-                    required>
+                    required> <!— This is the date and time that the task is due. -->
                     </div>
                     <br>
                     <button class="btn btn-primary" type="submit">
-                        <i class="fas fa-edit"></i>Submit
-                    </button>
+                        <i class="fas fa-edit"></i>Submit 
+                    </button> <!— This is the submit button. -->
 
                     <a href="/show-list" class="btn btn-warning>
-                        <i class="fas fa-undo"></i>Cancel</a>
+                        <i class="fas fa-undo"></i>Cancel</a> <!— This is the cancel button. -->
                 </form>
             </div>
         </div>
